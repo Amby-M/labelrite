@@ -1,0 +1,24 @@
+# See https://citation-file-format.github.io/ for the schema.
+cff-version: 1.2.0
+title: "LabelRite: Real-Time Detection of Anomalous Annotators in Human Labeling Pipelines via Reference-Distribution Modeling"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: Majumdar
+    given-names: Ambarish
+    email: amjemails@gmail.com
+repository-code: "https://github.com/Amby-M/labelrite"
+doi: 10.5281/zenodo.22887754
+url: "https://doi.org/10.5281/zenodo.22887754"
+license: MIT
+version: 0.1.0
+date-released: 2026-09-22
+preferred-citation:
+  type: article
+  title: "LabelRite: Real-Time Detection of Anomalous Annotators in Human Labeling Pipelines via Reference-Distribution Modeling"
+  authors:
+    - family-names: Majumdar
+      given-names: Ambarish
+  doi: 10.5281/zenodo.22887754
+  publisher: Zenodo
+  year: 2026
