@@ -14,7 +14,7 @@ def synthetic_workforce(
     n_annotators: int = 40,
     items_per_annotator: int = 2000,
     workforce_mean: float = 0.042,
-    workforce_sd: float = 0.009,
+    workforce_sd: float = 0.006,
     low: float = 0.03,
     high: float = 0.06,
     outliers: tuple[tuple[str, float], ...] = (
@@ -22,12 +22,18 @@ def synthetic_workforce(
         ("A-29", 0.070),
         ("A-33", 0.061),
     ),
-    seed: int = 7,
+    seed: int = 5,
 ) -> dict[str, np.ndarray]:
     """Generate per-annotator binary outcomes (1 = disagreed with reference).
 
     Returns a mapping of annotator id -> array of 0/1 outcomes, ready for
     :meth:`labelrite.LabelRiteDetector.fit`.
+
+    The default ``seed`` (5) and ``workforce_sd`` (0.006) are tuned so the
+    default workforce reproduces the paper's illustrative worked example
+    (Section 4): reference distribution mu=4.2%, sigma=0.9%, with the three
+    outlier annotators flagging at 2.7/3.1 sigma (high) and 2.1 sigma
+    (moderate). All data is synthetic.
     """
     if n_annotators < len(outliers) + 1:
         raise ValueError("n_annotators must exceed the number of outliers")
