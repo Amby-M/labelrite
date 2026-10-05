@@ -6,6 +6,8 @@ Instead of treating human labels as ground truth, LabelRite treats them as *sign
 
 **Method paper:** Majumdar, A. (2026). *LabelRite: Real-Time Detection of Anomalous Annotators in Human Labeling Pipelines via Reference-Distribution Modeling.* Zenodo. https://doi.org/10.5281/zenodo.22887754
 
+**Software record:** Majumdar, A. (2026). *LabelRite reference implementation.* Zenodo. https://doi.org/10.5281/zenodo.22903264
+
 ## Installation
 
 ```bash
@@ -51,7 +53,7 @@ for r in det.flagged():
 python examples/worked_example.py
 ```
 
-Runs the synthetic 40-moderator workforce from the paper: two annotators flagged with high confidence (quarantined + retrained), one in the low-confidence band (notification only). This script is the conformance test — its assertions encode the paper's reported outcomes.
+Runs the synthetic 40-moderator workforce from the paper: two annotators flagged with high confidence (quarantined + retrained), one in the low-confidence band (notification only). The fixed seed reproduces the paper's reported numbers — reference distribution μ=4.2%, σ=0.9%, flags at 2.7/3.1 SD (high) and 2.1 SD (moderate), ~120 mislabeled items/week removed by quarantine. All data is synthetic. This script is the conformance test — its assertions encode the paper's reported outcomes.
 
 ## Tests
 
@@ -60,6 +62,8 @@ pytest
 ```
 
 ## Citation
+
+If you use this software, please cite both the method paper and the software record:
 
 ```bibtex
 @misc{majumdar2026labelrite,
@@ -70,10 +74,19 @@ pytest
   doi          = {10.5281/zenodo.22887754},
   url          = {https://doi.org/10.5281/zenodo.22887754}
 }
+
+@software{majumdar2026labelrite_software,
+  author       = {Ambarish Majumdar},
+  title        = {LabelRite reference implementation},
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22903264},
+  url          = {https://doi.org/10.5281/zenodo.22903264}
+}
 ```
 
 See [CITATION.cff](CITATION.cff) for the machine-readable record.
 
 ## License
 
-MIT — see [LICENSE](LICENSE). The method paper is separately archived on Zenodo under CC-BY-4.0.
+CC-BY-4.0 — see [LICENSE](LICENSE), matching the terms of the method paper archived on Zenodo.

@@ -8,9 +8,9 @@ authors:
     given-names: Ambarish
     email: amjemails@gmail.com
 repository-code: "https://github.com/Amby-M/labelrite"
-doi: 10.5281/zenodo.22887754
-url: "https://doi.org/10.5281/zenodo.22887754"
-license: MIT
+doi: 10.5281/zenodo.22903264
+url: "https://doi.org/10.5281/zenodo.22903264"
+license: CC-BY-4.0
 version: 0.1.0
 date-released: 2026-09-22
 preferred-citation:
